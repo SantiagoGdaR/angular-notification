@@ -1,0 +1,22 @@
+<div class='app-notification'
+    [class.ok]='isOkNotification()'
+    [class.info]='isInfoNotification()'
+    [class.warning]='isWarningNotification()'
+    [class.error]='isErrorNotification()'>
+  <div class='ntf-header'
+    *ngIf='showHeader()'>
+      {{ notification.title }}
+  </div>
+  <div class='ntf-container'>
+    <div class='ntf-text'>
+      {{ notification.text }}
+    </div>    
+    <div class='ntf-footer'
+      *ngIf='showFooter()'>
+      <span class='ok'
+        *ngIf='notification.showOk'>{{ notification.okText }}</span>
+      <span class='cancel'
+        *ngIf='notification.showCancel'>{{ notification.cancelText }}</span>
+    </div>
+  </div>
+</div>

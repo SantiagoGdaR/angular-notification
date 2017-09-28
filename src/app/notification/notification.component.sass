@@ -1,0 +1,44 @@
+$ok-color: #76d275
+$info-color: #64b5f6
+$warning-color: #F2EE97
+$error-color: #f05545
+$border-color: #bec5b7
+$header-background-color: #bec5b7
+$white-color: #FFF
+$ok-button-color: #1976D2
+$cancel-button-color: #b6b8c3
+
+.app-notification 
+    border-radius: 5px
+    text-align: left
+    border: 1px $border-color solid
+    &.ok
+        background: $ok-color
+    &.info
+        background: $info-color
+    &.warning
+        background: $warning-color
+    &.error
+        background: $error-color
+    .ntf-header
+        padding: 5px 15px
+        color: $white-color
+        background: $header-background-color
+    .ntf-container
+        padding: 15px
+    .ntf-footer
+        margin-top: 15px
+        text-align: center
+        span
+            color: $white-color
+            padding: 5px 10px
+            border-radius: 5px
+            letter-spacing: 1.5px
+            cursor: pointer
+            border: 1px $border-color solid
+            &:hover
+                opacity: 0.5
+            &.ok
+                background: $ok-button-color
+            &.cancel
+                background: $cancel-button-color
