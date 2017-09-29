@@ -1,53 +1,108 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style='text-align:center'>
+<div class="header" style='text-align:center'>
   <h1>
-    Welcome to {{title}}!
+    angular-notification Module
   </h1>
-  <img width='300' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo='>
+  <img width='38' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo='>
 </div>
-<h2>Usage examples!</h2>
 <div class='content'>
+  <h2>Usage examples!</h2>
+  <hr />
   <div style='text-align:center'>
-    <app-notification [title]="'Success Example'" 
-      [text]='shortText'>
+    <div>
+      <h3>Simple Notification (in this case with type 'success' (remember you can also use 'info', 'warning' and 'error'))</h3>
+      <p>
+        <a (click)='toggleFirstNotification()'>Toggle Simple Success Notification</a>
+      </p>
+    </div>
+    <app-notification [type]="'success'"
+      [text]='longText'
+      [show]='showFirstNotification'
+      (closeCallback)='closeFirstNotification($event)'>
     </app-notification>
   </div>
+  <hr />
   <div style='text-align:center'>
-    <app-notification [type]="'Info'"
-      [text]='shortText'>
-    </app-notification>
-  </div>
-  <div style='text-align:center'>
-    <app-notification [type]="'Warning'"
-      [text]='shortText'>
-    </app-notification>
-  </div>
-  <div style='text-align:center'>
-    <app-notification [type]="'Error'"
-      [text]='shortText'>
-    </app-notification>
-  </div>
-  <div style='text-align:center'>
-    <app-notification [type]="'Success'"
-      [text]='longText'>
-    </app-notification>
-  </div>
-  <div style='text-align:center'>
-    <app-notification [type]="'Error'"
-      [text]='htmlText'>
-    </app-notification>
-  </div>
-  <div style='text-align:center'>
-    <app-notification [type]="'Info'"
-      [text]='htmlText'
-      [showOk]='true'>
-    </app-notification>
-  </div>
-  <div style='text-align:center'>
-    <app-notification [type]="'Warning'"
-      [text]='shortText'
+    <div>
+      <h3>Ok Button Notification (in this case with type 'info' (remember you can also use 'success', 'warning' and 'error'))</h3>
+      <p>
+        <a (click)='toggleSecondNotification()'>Toggle Info Notification with Ok Button</a>
+      </p>
+    </div>
+    <app-notification [type]="'info'"
+      [text]='longText'
+      [show]='showSecondNotification'
       [showOk]='true'
-      [showCancel]='true'>
+      (okCallback)='closeSecondNotification($event)'>
+    </app-notification>
+  </div>
+  <hr />
+  <div style='text-align:center'>
+    <div>
+      <h3>Ok and Cancel Button Notification (in this case with type 'warning' (remember you can also use 'success', 'info' and 'error'))</h3>
+      <p>
+        <a (click)='toggleThirdNotification()'>Toggle warning Notification with Ok and Cancel Button</a>
+      </p>
+    </div>
+    <app-notification [type]="'warning'"
+      [text]='shortText'
+      [show]='showThirdNotification'
+      [showOk]='true'
+      (okCallback)='closeThirdNotification($event)'
+      [showCancel]='true'
+      (cancelCallback)='closeThirdNotification($event)'>
+    </app-notification>
+  </div>
+  <hr />
+  <div style='text-align:center'>
+    <div>
+      <h3>Simple Notification with Header (in this case with type 'error' (remember you can also use 'success', 'info' and 'warning'))</h3>
+      <p>
+        <a (click)='toggleFourthNotification()'>Toggle Simple Error Notification with Header</a>
+      </p>
+    </div>
+    <app-notification  [type]="'error'"
+      [title]="'Error Example'" 
+      [text]='htmlText'
+      [show]='showFourthNotification'
+      (closeCallback)='closeFourthNotification($event)'>
+    </app-notification>
+  </div>
+  <hr />
+  <div style='text-align:center'>
+    <div>
+      <h3>Notification with Header and Ok Button (in this case with type 'success' and custom text (remember you can also use 'info', 'warning' and 'error'))</h3>
+      <p>
+        <a (click)='toggleFifthNotification()'>Toggle Success Notification with Header and Ok Button</a>
+      </p>
+    </div>
+    <app-notification [type]="'success'"
+      [title]="'Success Example'"
+      [text]='shortText'
+      [show]='showFifthNotification'
+      [showOk]='true'
+      [okText]="'custom ok text'"
+      (closeCallback)='closeFifthNotification($event)'>
+    </app-notification>
+  </div>
+  <hr />
+  <div style='text-align:center'>
+    <div>
+      <h3>Notification with Header, Ok and Cancel Button (in this case with type 'warning' and custom text (remember you can also use 'success', 'info' and 'error'))</h3>
+      <p>
+        <a (click)='toggleSixthNotification()'>Toggle Warning Notification with Header and Ok Button</a>
+      </p>
+    </div>
+    <app-notification [type]="'warning'"
+      [title]="'Warning Example'"
+      [text]='shortText'
+      [show]='showSixthNotification'
+      [showOk]='true'
+      [okText]="'custom ok text'"
+      [showCancel]='true'
+      [cancelText]="'custom cancel text'"
+      (okCallback)='closeSixthNotification($event)'
+      (cancelCallback)='closeSixthNotification($event)'>
     </app-notification>
   </div>
 </div>

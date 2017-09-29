@@ -2,28 +2,35 @@
     [class.ok]='isOkNotification()'
     [class.info]='isInfoNotification()'
     [class.warning]='isWarningNotification()'
-    [class.error]='isErrorNotification()'>
+    [class.error]='isErrorNotification()'
+    [class.ntf-border]='showHeader()'
+    [@animation]="animationState">
   <div class='ntf-header'
     *ngIf='showHeader()'>
-    <div class="ntf-wrapper">
+    <div [class.ntf-wrapper]='applyWrapper()'>
       {{ title }}
     </div>
-      <span class="close"></span>
+      <span class='close'
+        *ngIf='showHeaderCloseBtn()'
+        (click)='onCloseClick()'></span>
   </div>
   <div class='ntf-container'>
     <div class='ntf-text'>
-      <div class="ntf-wrapper"
-        [innerHTML]="text">
+      <div [class.ntf-wrapper]='applyWrapper()'
+        [innerHTML]='text'>
       </div>
-      <span class="close"
-        *ngIf="showContainerCloseBtn()"></span>
+      <span class='close'
+        *ngIf='showContainerCloseBtn()'
+        (click)='onCloseClick()'></span>
     </div>    
     <div class='ntf-footer'
       *ngIf='showFooter()'>
       <span class='ok'
-        *ngIf='showOk'>{{ okText }}</span>
+        *ngIf='showOk'
+        (click)='onOkClick()'>{{ okText }}</span>
       <span class='cancel'
-        *ngIf='showCancel'>{{ cancelText }}</span>
+        *ngIf='showCancel'
+        (click)='onCancelClick()'>{{ cancelText }}</span>
     </div>
   </div>
 </div>

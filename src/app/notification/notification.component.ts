@@ -1,9 +1,34 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { 
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  Output,
+  EventEmitter,
+  trigger,
+  transition,
+  animate,
+  style,
+  state,
+  SimpleChanges
+} from '@angular/core';
 
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
-  styleUrls: ['./notification.component.sass']
+  styleUrls: ['./notification.component.sass'],
+  animations: [
+    trigger('animation', [
+      state('hidden', style({
+        display: 'none'
+      })),
+      state('visible',   style({
+        display: 'block'
+      })),
+      transition('hidden => visible', animate('100ms ease-in')),
+      transition('visible => hidden', animate('100ms ease-out'))
+    ])
+  ]
 })
 export class NotificationComponent implements OnChanges {
   @Input() title = '';
@@ -14,8 +39,21 @@ export class NotificationComponent implements OnChanges {
   @Input() okText? = 'Ok';
   @Input() type? = 'success';
   @Input() show? = true;
+  @Output() okCallback = new EventEmitter();
+  @Output() closeCallback = new EventEmitter();
+  @Output() cancelCallback = new EventEmitter();
+
+  animationState: String;
+
 
   constructor() { }
+
+  ngOnChanges(changes: SimpleChanges) {
+    const show = changes['show'];
+    if (show.currentValue !== show.previousValue) {
+      this.animationState = show.currentValue ? 'visible' : 'hidden';
+    }
+  }
 
   isOkNotification = (): boolean => {
     return this.type.toLowerCase() === 'success';
@@ -45,5 +83,23 @@ export class NotificationComponent implements OnChanges {
     return !this.showHeader() && !(this.showOk || this.showCancel);
   }
 
-  ngOnChanges = () => { };
+  showHeaderCloseBtn= (): boolean => {
+    return !(this.showOk || this.showCancel);
+  }
+
+  applyWrapper = (): boolean => {
+    return !this.showHeader() && !(this.showOk || this.showCancel);
+  }
+
+  onOkClick() {
+    this.okCallback.emit();
+  }
+
+  onCloseClick() {
+    this.closeCallback.emit();
+  }
+
+  onCancelClick() {
+    this.cancelCallback.emit();
+  }
 }
