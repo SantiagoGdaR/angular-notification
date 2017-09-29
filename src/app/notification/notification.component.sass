@@ -7,6 +7,7 @@ $header-background-color: #bec5b7
 $white-color: #FFF
 $ok-button-color: #1976D2
 $cancel-button-color: #b6b8c3
+$close-icon-color: #333
 
 .app-notification 
     border-radius: 5px
@@ -24,8 +25,10 @@ $cancel-button-color: #b6b8c3
         padding: 5px 15px
         color: $white-color
         background: $header-background-color
+        position: relative
     .ntf-container
-        padding: 15px
+        padding: 15px        
+        position: relative
     .ntf-footer
         margin-top: 15px
         text-align: center
@@ -42,3 +45,28 @@ $cancel-button-color: #b6b8c3
                 background: $ok-button-color
             &.cancel
                 background: $cancel-button-color
+    .ntf-wrapper
+        width: 95%
+        display: inline-block    
+    .close
+        position: absolute
+        right: 15px
+        width: 18px
+        height: 18px
+        opacity: 0.3
+        cursor: pointer  
+        top: 50%
+        transform: translateY(-50%)
+        &:hover
+            opacity: 1        
+        &:before, &:after 
+            position: absolute
+            left: 15px
+            content: ' '
+            height: 18px
+            width: 2px
+            background-color: $close-icon-color        
+        &:before 
+            transform: rotate(45deg)        
+        &:after 
+            transform: rotate(-45deg)

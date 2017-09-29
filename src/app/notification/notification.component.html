@@ -5,18 +5,25 @@
     [class.error]='isErrorNotification()'>
   <div class='ntf-header'
     *ngIf='showHeader()'>
-      {{ notification.title }}
+    <div class="ntf-wrapper">
+      {{ title }}
+    </div>
+      <span class="close"></span>
   </div>
   <div class='ntf-container'>
     <div class='ntf-text'>
-      {{ notification.text }}
+      <div class="ntf-wrapper"
+        [innerHTML]="text">
+      </div>
+      <span class="close"
+        *ngIf="showContainerCloseBtn()"></span>
     </div>    
     <div class='ntf-footer'
       *ngIf='showFooter()'>
       <span class='ok'
-        *ngIf='notification.showOk'>{{ notification.okText }}</span>
+        *ngIf='showOk'>{{ okText }}</span>
       <span class='cancel'
-        *ngIf='notification.showCancel'>{{ notification.cancelText }}</span>
+        *ngIf='showCancel'>{{ cancelText }}</span>
     </div>
   </div>
 </div>

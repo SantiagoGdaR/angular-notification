@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { Notification } from './notification';
 
 @Component({
   selector: 'app-notification',
@@ -7,32 +6,43 @@ import { Notification } from './notification';
   styleUrls: ['./notification.component.sass']
 })
 export class NotificationComponent implements OnChanges {
-  @Input() notification: Notification;
+  @Input() title = '';
+  @Input() text: String;
+  @Input() showCancel? = false;
+  @Input() showOk? = false;
+  @Input() cancelText? = 'Cancel';
+  @Input() okText? = 'Ok';
+  @Input() type? = 'success';
+  @Input() show? = true;
 
   constructor() { }
 
   isOkNotification = (): boolean => {
-    return this.notification.isOk();
+    return this.type.toLowerCase() === 'success';
   }
 
   isInfoNotification = (): boolean => {
-    return this.notification.isInfo();
+    return this.type.toLowerCase() === 'info';
   }
 
   isWarningNotification = (): boolean => {
-    return this.notification.isWarning();
+    return this.type.toLowerCase() === 'warning';
   }
 
   isErrorNotification = (): boolean => {
-    return this.notification.isError();
+    return this.type.toLowerCase() === 'error';
   }
 
   showHeader = (): boolean => {
-    return this.notification.showHeader();
+    return this.title !== '';
   }
 
   showFooter = (): boolean => {
-    return this.notification.showFooter();
+    return this.showOk || this.showCancel;
+  }
+
+  showContainerCloseBtn = (): boolean => {
+    return !this.showHeader() && !(this.showOk || this.showCancel);
   }
 
   ngOnChanges = () => { };
