@@ -8,12 +8,12 @@ import { NotificationTypes } from './notification/notification-types.enum';
 })
 export class AppComponent {
   title: String = 'app';
-  showFirstNotification = true;
-  showSecondNotification = true;
-  showThirdNotification = true;
-  showFourthNotification = true;
-  showFifthNotification = true;
-  showSixthNotification = true;
+  showFirstNotification = false;
+  showSecondNotification = false;
+  showThirdNotification = false;
+  showFourthNotification = false;
+  showFifthNotification = false;
+  showSixthNotification = false;
 
   shortText: String = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis mi diam,
     sollicitudin ultrices est imperdiet id.`;
