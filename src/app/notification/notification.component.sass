@@ -18,8 +18,9 @@ $error-font-color: #870000
 
 
 .app-notification 
-    border-radius: 5px
     text-align: left
+    &.ntf-radius
+        border-radius: 5px
     &.show
         display: block
     &.ntf-border
@@ -65,8 +66,9 @@ $error-font-color: #870000
         text-align: center
         span
             color: $white-color
-            padding: 5px 15px
-            border-radius: 5px
+            padding: 5px 15px            
+            &.ntf-radius
+                border-radius: 5px
             cursor: pointer
             margin: 0 10px 
             &.cancel

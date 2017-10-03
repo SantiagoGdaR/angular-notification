@@ -39,6 +39,7 @@ export class NotificationComponent implements OnChanges {
   @Input() okText? = 'Ok';
   @Input() type? = 'success';
   @Input() show? = true;
+  @Input() style? = 'rounded';
   @Output() okCallback = new EventEmitter();
   @Output() closeCallback = new EventEmitter();
   @Output() cancelCallback = new EventEmitter();
@@ -69,6 +70,10 @@ export class NotificationComponent implements OnChanges {
 
   isErrorNotification = (): boolean => {
     return this.type.toLowerCase() === 'error';
+  }
+
+  isRoundedNotification = (): boolean => {
+    return this.style.toLowerCase() === 'rounded';
   }
 
   showHeader = (): boolean => {

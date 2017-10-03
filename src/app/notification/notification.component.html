@@ -4,6 +4,7 @@
     [class.warning]='isWarningNotification()'
     [class.error]='isErrorNotification()'
     [class.ntf-border]='showHeader()'
+    [class.ntf-radius]='isRoundedNotification()'
     [@animation]="animationState">
   <div class='ntf-header'
     *ngIf='showHeader()'>
@@ -26,9 +27,11 @@
     <div class='ntf-footer'
       *ngIf='showFooter()'>
       <span class='ok'
+        [class.ntf-radius]='isRoundedNotification()'
         *ngIf='showOk'
         (click)='onOkClick()'>{{ okText }}</span>
       <span class='cancel'
+        [class.ntf-radius]='isRoundedNotification()'
         *ngIf='showCancel'
         (click)='onCancelClick()'>{{ cancelText }}</span>
     </div>

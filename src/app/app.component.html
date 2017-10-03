@@ -39,12 +39,13 @@
   <hr />
   <div style='text-align:center'>
     <div>
-      <h3>Ok and Cancel Button Notification (in this case with type 'warning' (remember you can also use 'success', 'info' and 'error'))</h3>
+      <h3>Ok and Cancel Button Notification With Square Style (in this case with type 'warning' (remember you can also use 'success', 'info' and 'error'))</h3>
       <p>
         <a (click)='toggleThirdNotification()'>Toggle warning Notification with Ok and Cancel Button</a>
       </p>
     </div>
     <app-notification [type]="'warning'"
+      [style]="'square'"
       [text]='shortText'
       [show]='showThirdNotification'
       [showOk]='true'
@@ -56,7 +57,7 @@
   <hr />
   <div style='text-align:center'>
     <div>
-      <h3>Simple Notification with Header (in this case with type 'error' (remember you can also use 'success', 'info' and 'warning'))</h3>
+      <h3>Simple Notification with Header and HTML in text (in this case with type 'error' (remember you can also use 'success', 'info' and 'warning'))</h3>
       <p>
         <a (click)='toggleFourthNotification()'>Toggle Simple Error Notification with Header</a>
       </p>
@@ -94,6 +95,7 @@
       </p>
     </div>
     <app-notification [type]="'warning'"
+      [style]="'square'"
       [title]="'Warning Example'"
       [text]='shortText'
       [show]='showSixthNotification'
