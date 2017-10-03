@@ -38,7 +38,7 @@ export class NotificationComponent implements OnChanges {
   @Input() cancelText? = 'Cancel';
   @Input() okText? = 'Ok';
   @Input() type? = 'success';
-  @Input() show? = true;
+  @Input() show: boolean;
   @Input() style? = 'rounded';
   @Output() okCallback = new EventEmitter();
   @Output() closeCallback = new EventEmitter();

@@ -1,28 +1,40 @@
-# AngularNotification
+# Angular Notification
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+Angular notification is an easy to use module to manage notifications in your app.
 
-## Development server
+## Instalation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+SOON ON NPM...
 
-## Code scaffolding
+## Api
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Angular Notifications allows multiple configuration settings through component properties:
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+**[text] String** = Mandatory - Is the text of the notification. It can contain html code.
 
-## Running unit tests
+**[show] boolean** = Mandatory. Sets if the visibility state of the notifcation. Used to toogle the visibility state hidden if false, visible if true.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**[title] String** = Optional - If a value is provided the header section of the notification is shown with the provided title
 
-## Running end-to-end tests
+**[showOk] boolean** = Optional - False by default. Shows or hides the Ok button.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+**[okText] String** = Optional - 'Ok' by default. Sets an alternative text to the Ok button.
 
-## Further help
+**[showCancel] boolean** = Optional - False by default. Shows or hides the Cancel button.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**[cancelText] String** = Optional - 'Cancel' by default. Sets an alternative text to the Cancel button.
+
+**[type] String** = Optional - 'success' by default. Sets the type of notification. Available options: ['success', 'info', 'warning', 'error'];
+
+**[style] String** = Optional - 'rounded' by default. Sets the style of the notification. Available options: ['rounded', 'square'].
+
+**[okCallback] EventEmitter()** - Sets the callback for the ok button.
+
+**[closeCallback] EventEmitter()** - Sets the callback for the close button
+
+**[cancelCallback] EventEmitter()** - Sets the callback for the cancel button.
+
+## Examples
+For the examples a medium post is going to be created.
+
