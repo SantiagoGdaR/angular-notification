@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NotificationTypes } from './notification/notification-types.enum';
 
 @Component({
   selector: 'app-root',
