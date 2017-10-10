@@ -1,6 +1,6 @@
 {
   "name": "angular-ntf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Santiago Garcia da Rosa",
   "keywords": [
@@ -35,20 +35,20 @@
   "main": "./lib/notification.module.js",
   "typings": "./lib/notification.module.d.ts",
   "dependencies": {
-    "@angular/animations": "^4.0.0",
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^4.0.0",
+    "@angular/animations": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.1",
-    "zone.js": "^0.8.14"
-  },
-  "devDependencies": {
+    "zone.js": "^0.8.14",
     "@angular/cli": "1.2.4",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",

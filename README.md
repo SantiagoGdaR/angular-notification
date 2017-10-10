@@ -2,9 +2,19 @@
 
 Angular notification is an easy to use module to manage notifications in your app.
 
-## Instalation
+SOON RELEASE OF VERSION 1.0.0...
 
-SOON ON NPM...
+----------
+
+
+## Installation
+
+    npm install angular-ntf
+
+## Import NotificatioModule
+
+    Import { NotificationModule } from 'angular-ntf';
+
 
 ## Api
 

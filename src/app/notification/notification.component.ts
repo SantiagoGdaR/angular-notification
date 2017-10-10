@@ -1,4 +1,4 @@
-import { 
+import {
   Component,
   OnInit,
   Input,
@@ -16,7 +16,7 @@ import {
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
-  styleUrls: ['./notification.component.sass'],
+  styleUrls: ['./notification.component.css'],
   animations: [
     trigger('animation', [
       state('hidden', style({

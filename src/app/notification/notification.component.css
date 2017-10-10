@@ -1,0 +1,78 @@
+.app-notification {
+    text-align: left; }
+    .app-notification.ntf-radius {
+      border-radius: 5px; }
+    .app-notification.show {
+      display: block; }
+    .app-notification.ntf-border {
+      border: 1px #bec5b7 solid; }
+    .app-notification.ok {
+      background: #6abf69;
+      color: #003300; }
+      .app-notification.ok   .ntf-footer   span.ok {
+        background: #003300; }
+    .app-notification.info {
+      background: #64b5f6;
+      color: #003c8f; }
+      .app-notification.info   .ntf-footer   span.ok {
+        background: #003c8f; }
+    .app-notification.warning {
+      background: #fff263;
+      color: #c49000; }
+      .app-notification.warning   .ntf-footer   span.ok {
+        background: #c49000; }
+    .app-notification.error {
+      background: #f05545;
+      color: #870000; }
+      .app-notification.error   .ntf-footer   span.ok {
+        background: #870000; }
+    .app-notification   .ntf-header {
+      padding: 5px 15px;
+      color: #FFF;
+      background: #bec5b7;
+      position: relative; }
+    .app-notification   .ntf-container {
+      padding: 15px;
+      position: relative; }
+    .app-notification   .ntf-footer {
+      margin-top: 15px;
+      text-align: center; }
+      .app-notification   .ntf-footer   span {
+        color: #FFF;
+        padding: 5px 15px;
+        cursor: pointer;
+        margin: 0 10px; }
+        .app-notification   .ntf-footer   span.ntf-radius {
+          border-radius: 5px; }
+        .app-notification   .ntf-footer   span.cancel {
+          background: #bec5b7; }
+        .app-notification   .ntf-footer   span:hover {
+          opacity: 0.8; }
+    .app-notification   .ntf-wrapper {
+      width: 95%;
+      display: inline-block; }
+    .app-notification   .close {
+      position: absolute;
+      right: 15px;
+      width: 18px;
+      height: 18px;
+      opacity: 0.3;
+      cursor: pointer;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+      .app-notification   .close:hover {
+        opacity: 1; }
+      .app-notification   .close:before, .app-notification   .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 18px;
+        width: 2px;
+        background-color: #000a12; }
+      .app-notification   .close:before {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .app-notification   .close:after {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
