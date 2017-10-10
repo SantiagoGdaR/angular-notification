@@ -1,6 +1,6 @@
 {
   "name": "angular-ntf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "author": "Santiago Garcia da Rosa",
   "keywords": [
@@ -27,7 +27,7 @@
   "private": false,
   "files": [
     "lib"
-  ],  
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/SantiagoGdaR/angular-notification.git"
