@@ -2,6 +2,8 @@
 
 Angular notification is an easy to use module to manage notifications in your app.
 
+[Demo Page](https://santiagogdar.github.io/angular-notification/ "Demo Page")
+
 ## Installation
 
     npm install angular-ntf
